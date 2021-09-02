@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sims.sims_account,sims.sims_account,model_sims_account,base.group_user,1,1,1,1
+access_sims.sims_driver,sims.sims_driver,model_sims_driver,base.group_user,1,1,1,1
+access_sims.sims_vehicle,sims.sims_vehicle,model_sims_vehicle,base.group_user,1,1,1,1
+
