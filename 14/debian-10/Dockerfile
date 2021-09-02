@@ -22,7 +22,7 @@ RUN curl -sLO https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.
     rm wkhtmltox_0.12.5-1.buster_amd64.deb
 
 COPY rootfs /
-COPY module /custom/addons/module
+COPY module /opt/bitnami/odoo/addons
 RUN /opt/bitnami/scripts/odoo/postunpack.sh
 ENV BITNAMI_APP_NAME="odoo" \
     BITNAMI_IMAGE_VERSION="14.0.20210810-debian-10-r22" \
@@ -33,8 +33,7 @@ ENV BITNAMI_APP_NAME="odoo" \
     POSTGRESQL_HOST="postgresql" \
     POSTGRESQL_PORT_NUMBER="5432" \
     POSTGRESQL_ROOT_PASSWORD="" \
-    POSTGRESQL_ROOT_USER="postgres" \
-    ODOO_ADDONS_DIR="$ODOO_ADDONS_DIR,/custom/addons"
+    POSTGRESQL_ROOT_USER="postgres"
 
 EXPOSE 3000 8069 8072
 
