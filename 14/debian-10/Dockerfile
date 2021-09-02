@@ -22,7 +22,7 @@ RUN curl -sLO https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.
     rm wkhtmltox_0.12.5-1.buster_amd64.deb
 
 COPY rootfs /
-COPY module /opt/bitnami/odoo/addons
+COPY module /opt/bitnami/odoo/addons/sims-module
 RUN /opt/bitnami/scripts/odoo/postunpack.sh
 ENV BITNAMI_APP_NAME="odoo" \
     BITNAMI_IMAGE_VERSION="14.0.20210810-debian-10-r22" \
